@@ -55,6 +55,42 @@
   }
 }
 
+.headlineContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.headlineLogo {
+  width: 100%;
+  max-width: 55rem;
+  height: auto;
+  display: block;
+  margin-bottom: 2rem;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+  transition: filter 0.3s ease;
+}
+
+.headlineLogo:hover {
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.12));
+}
+
+@media (min-width: 768px) {
+  .headlineLogo {
+    max-width: 70rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .headlineLogo {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .italic {
   font-style: italic;
   font-weight: 400; /* Playfair Display light isn't in the link, use regular italic */

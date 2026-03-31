@@ -14,10 +14,13 @@ export default function Hero() {
             <span className={styles.badgeText}>Simple Vastu for Happy Homes</span>
           </div>
 
-          <h1 className={styles.title}>
-            Healing Consultancy<br />
-            <span className={styles.italic}>Vastu & Astrology</span>
-          </h1>
+          <div className={styles.headlineContainer}>
+            <img 
+              src="/logo2.png" 
+              alt="Healing Consultancy - Vastu & Astrology" 
+              className={styles.headlineLogo}
+            />
+          </div>
 
           <p className={styles.description}>
             Helping you bring peace, happiness, and money to your home with Vastu.

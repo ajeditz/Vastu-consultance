@@ -58,10 +58,14 @@ export default function Navbar() {
       <nav className={`${styles.nav} ${isOpen ? styles.openNav : ""}`}>
         <Link
           href="/"
-          className={`${styles.logo} brand-font`}
+          className={styles.logo}
           onClick={(e) => handleNavClick(e)}
         >
-          Healing<span className="text-accent">.</span>
+          <img 
+            src="/amethyst-Photoroom.svg" 
+            alt="Healing Logo" 
+            className={styles.logoImage}
+          />
         </Link>
 
         <div className={`${styles.links} ${isOpen ? styles.open : ""}`}>
