@@ -1,9 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { SriYantra } from "./CelestialDecor";
-import TipBox from "./TipBox";
 import BookingModal from "./BookingModal";
 import styles from "./QuoteBanner.module.css";
 
@@ -38,18 +36,24 @@ export default function QuoteBanner() {
           </div>
 
           <div className={styles.textSide}>
-            <div className={styles.logoWrapper}>
-              <div className={styles.omSymbol}>ॐ</div>
-              <div className={styles.hindiText}>वास्तु देवाय: नम:</div>
-            </div>
-            
             <div className={styles.quoteWrapper}>
-              <span className={styles.quoteMark}>“</span>
+              <span className={styles.quoteMark}>&ldquo;</span>
               <blockquote className={styles.quote}>
                 A peaceful home filled with positive energy creates happiness, success, and harmony in your life.
               </blockquote>
-              <div className={styles.trustLine}>
-                Guided by Shalu Singh, with 15+ years of Vastu expertise
+            </div>
+
+            <div className={styles.ctaGroup}>
+              <div className={styles.ctaSubtext}>BOOK YOUR MEETING TODAY</div>
+              <button 
+                onClick={() => setIsBookingOpen(true)} 
+                className={styles.consultBtn}
+              >
+                Book a Consultation
+              </button>
+              <div className={styles.socialProof}>
+                <span className={styles.dot}></span>
+                Trusted by 100+ families
               </div>
             </div>
           </div>
@@ -70,24 +74,6 @@ export default function QuoteBanner() {
                 <p className={styles.expertTitleInline}>Vastu Consultant & Energy Expert</p>
               </div>
             </div>
-          </div>
-
-          <div className={styles.ctaGroup}>
-            <div className={styles.ctaSubtext}>BOOK YOUR MEETING TODAY</div>
-            <button 
-              onClick={() => setIsBookingOpen(true)} 
-              className={styles.consultBtn}
-            >
-              Book a Consultation
-            </button>
-            <div className={styles.socialProof}>
-              <span className={styles.dot}></span>
-              Trusted by 500+ families
-            </div>
-          </div>
-
-          <div className={styles.tipSide}>
-            <TipBox />
           </div>
         </div>
       </div>

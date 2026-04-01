@@ -116,7 +116,7 @@ export default function Services() {
             <span className={styles.badgeText}>Our Expertise</span>
           </div>
           <h2 className={styles.title}>
-            Sacred <span className={styles.italic}>Services</span>
+            Our <span className={styles.italic}>Services</span>
           </h2>
           <p className={styles.subtitle}>
             Blending ancient wisdom with modern living to create spaces that breathe and thrive.

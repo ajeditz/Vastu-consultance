@@ -15,9 +15,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <QuoteBanner />
+      <Testimonials />
       <Services />
       <About />
-      <Testimonials />
       <BuyBook />
       <Contact />
       

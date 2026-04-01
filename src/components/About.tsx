@@ -20,7 +20,7 @@ export default function About() {
                   className={styles.image}
                 />
                 <div className={styles.experienceBadge}>
-                  <span className={styles.years}>15+</span>
+                  <span className={styles.years}>5+</span>
                   <span className={styles.expText}>Years of Experience</span>
                 </div>
               </div>
@@ -41,7 +41,7 @@ export default function About() {
               Transform Your Home with Proven Vastu Expertise
             </h2>
             <p className={styles.description}>
-              Your home influences your energy, success, and peace of mind. With over 15 years of experience, we help homeowners create balanced and harmonious living spaces using authentic Vastu principles.
+              Your home influences your energy, success, and peace of mind. With over 5 years of experience, we help homeowners create balanced and harmonious living spaces using authentic Vastu principles.
             </p>
             <p className={styles.description}>
               Our approach is simple—we identify energy imbalances and provide practical solutions that bring clarity, positivity, and growth into your life
@@ -49,7 +49,7 @@ export default function About() {
             
             <div className={styles.stats}>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>500+</span>
+                <span className={styles.statNumber}>100+</span>
                 <span className={styles.statLabel}>Success Stories</span>
               </div>
               <div className={styles.statItem}>

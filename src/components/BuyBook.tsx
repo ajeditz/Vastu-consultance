@@ -54,7 +54,7 @@ export default function BuyBook() {
                 rel="noopener noreferrer" 
                 className={styles.amazonBtn}
               >
-                <FaAmazon /> Buy from Amazon
+                <FaAmazon /> Amazon
               </a>
               <a 
                 href="https://www.flipkart.com/search?q=number%27s+magic+book+by+shalu+Singh+" 
@@ -62,7 +62,15 @@ export default function BuyBook() {
                 rel="noopener noreferrer" 
                 className={styles.flipkartBtn}
               >
-                <FaShoppingCart /> Buy from Flipkart
+                <FaShoppingCart /> Flipkart
+              </a>
+              <a 
+                href="https://notionpress.com/in/read/number-s-magic" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.notionBtn}
+              >
+                📖 Notion Press
               </a>
             </div>
             

@@ -80,7 +80,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
         </div>
 
         <div className={styles.footer}>
-          <p>Trusted by 500+ families for authentic Vastu wisdom.</p>
+          <p>Trusted by 100+ families for authentic Vastu wisdom.</p>
         </div>
       </div>
     </div>

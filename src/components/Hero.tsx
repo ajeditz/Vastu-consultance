@@ -1,10 +1,28 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./Hero.module.css";
 import RashiWheel from "./RashiWheel";
 
+const TIPS = [
+  "A clean and open center invites positive energy and harmony into your home.",
+  "Place a small water fountain in the North to attract wealth and career growth.",
+  "Avoid placing mirrors directly in front of your bed for a restful sleep.",
+  "Position your kitchen in the South-East corner to balance the fire element.",
+  "Keep your main entrance bright and well-lit to welcome divine blessings."
+];
+
 export default function Hero() {
+  const [currentTip, setCurrentTip] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTip((prev) => (prev + 1) % TIPS.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <main className={`${styles.hero} vastu-grid`}>
       <div className="container">
@@ -37,6 +55,11 @@ export default function Hero() {
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </Link>
+          </div>
+
+          <div className={styles.proTip}>
+            <span className={styles.proTipLabel}>💡 Vastu Tip</span>
+            <p className={styles.proTipText} key={currentTip}>{TIPS[currentTip]}</p>
           </div>
         </div>
       </div>

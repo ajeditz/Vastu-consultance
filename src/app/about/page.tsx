@@ -88,7 +88,7 @@ export default function AboutPage() {
                     style={{ objectFit: 'cover', objectPosition: 'center top' }}
                   />
                   <div className={styles.glassBadge}>
-                    <span>15+ Years</span>
+                    <span>5+ Years</span>
                     <small>of Vedic Studies</small>
                   </div>
                 </div>
