@@ -1,6 +1,6 @@
 .testimonials {
   padding: 4rem 0;
-  background-color: var(--background);
+  background-color: #fdfbf7;
   overflow: hidden;
 }
 
@@ -65,6 +65,7 @@
   font-weight: 500;
 }
 
+/* Wrapper */
 .testimonialsWrapper {
   position: relative;
   min-height: 400px;
@@ -84,10 +85,11 @@
   }
 }
 
+/* Scramble state */
 .scrambleContainer {
   position: relative;
   width: 100%;
-  height: 320px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,118 +97,72 @@
 
 @media (min-width: 768px) {
   .scrambleContainer {
-    height: 600px;
+    height: 700px;
   }
 }
 
+.scrambleContainer .imageCard {
+  position: absolute;
+  width: 220px;
+}
+
+@media (min-width: 768px) {
+  .scrambleContainer .imageCard {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .scrambleContainer .imageCard {
+    width: 340px;
+  }
+}
+
+/* Grid (aligned) state — even layout */
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
   width: 100%;
   max-width: 1200px;
   position: relative;
   z-index: 5;
-  justify-items: center;
-  align-items: stretch;
 }
 
 @media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  z-index: 1;
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Card — square corners, no badge */
+.imageCard {
+  background: white;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
   position: relative;
-  width: 90vw;
-  max-width: 400px;
+  z-index: 1;
 }
 
-@media (min-width: 768px) {
-  .card {
-    padding: 2.25rem;
-    width: auto;
-    max-width: none;
-  }
-}
-.card:hover {
-  box-shadow: 0 20px 40px rgba(211, 84, 0, 0.1);
+.imageCard:hover {
+  box-shadow: 0 12px 30px rgba(211, 84, 0, 0.12);
   z-index: 10;
 }
 
-.stars {
-  display: flex;
-  gap: 0.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.content {
-  font-size: 1.1rem;
-  color: #374151;
-  font-style: italic;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  font-weight: 400;
-}
-
-.author {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: auto;
-}
-
-.authorCircle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.avatarImg {
-  width: 100%;
-  height: 100%;
+.testimonialImg {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
   object-fit: cover;
-}
-
-.name {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--foreground);
-  margin-bottom: 0.125rem;
-}
-
-.verified {
-  font-size: 0.75rem;
-  color: #10b981;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.verified::before {
-  content: "●";
-  font-size: 0.5rem;
 }

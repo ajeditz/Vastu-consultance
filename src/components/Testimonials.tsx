@@ -6,73 +6,27 @@ import { MoonPhases } from "./CelestialDecor";
 import styles from "./Testimonials.module.css";
 import Image from "next/image";
 
-const testimonials = [
-  {
-    name: "Namratha D.",
-    content: "Very positive, very good guidance. Worth it! Felt a bit relieved after consultation.",
-    stars: 5,
-    avatar: "/images/testimonials/usha.png",
-    scramble: { x: -120, y: -40, rotate: -12, scale: 0.95 },
-  },
-  {
-    name: "Akshay W.",
-    content: "Good summary and helpful guidance. Recommended for clear insights.",
-    stars: 5,
-    avatar: "/images/testimonials/dheeraj.png",
-    scramble: { x: 140, y: -80, rotate: 10, scale: 1.02 },
-  },
-  {
-    name: "Madhuri K.",
-    content: "Ji ma'am karti hu main aur kuch remedies jo aapne bataye. Positive energy feel ho rahi hai.",
-    stars: 5,
-    avatar: "/images/testimonials/jigna.png",
-    scramble: { x: -160, y: 120, rotate: -15, scale: 0.98 },
-  },
-  {
-    name: "Kalaivani S.",
-    content: "Accurate predictions and very helpful space harmonization tips. Thank you!",
-    stars: 5,
-    avatar: "/images/testimonials/kalaivani.png",
-    scramble: { x: 180, y: 60, rotate: 8, scale: 1.05 },
-  },
-  {
-    name: "Divya R.",
-    content: "Nice information ma'am. Thank you for the detailed analysis and positive vibes.",
-    stars: 5,
-    avatar: "/images/testimonials/sakshi.png",
-    scramble: { x: 20, y: -160, rotate: -8, scale: 1.03 },
-  },
-  {
-    name: "Menkka V.",
-    content: "Thank u mam. Your remedies are very simple yet very effective for my home.",
-    stars: 5,
-    avatar: "/images/testimonials/jot.png",
-    scramble: { x: -40, y: 180, rotate: 15, scale: 0.97 },
-  },
-  {
-    name: "Bjbbikknvf B.",
-    content: "Bhut acha h experience! Very professional and deep knowledge of Vastu.",
-    stars: 5,
-    avatar: "/images/testimonials/raj.png",
-    scramble: { x: -200, y: -120, rotate: -10, scale: 0.96 },
-  },
-  {
-    name: "N S.",
-    content: "Thank you for the guidance. It has brought clarity to my life path.",
-    stars: 4,
-    avatar: "/images/testimonials/n-s.png",
-    scramble: { x: 220, y: -140, rotate: 12, scale: 1.01 },
-  },
+const testimonialImages = [
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.34.22 AM (1).jpeg", scramble: { x: -80, y: -30, rotate: -8, scale: 1.05 } },
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.34.22 AM.jpeg", scramble: { x: 60, y: -50, rotate: 6, scale: 1.1 } },
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.34.23 AM (1).jpeg", scramble: { x: -40, y: 60, rotate: -10, scale: 1.08 } },
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.34.23 AM.jpeg", scramble: { x: 90, y: 30, rotate: 5, scale: 1.12 } },
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.34.24 AM (1).jpeg", scramble: { x: 10, y: -70, rotate: -4, scale: 1.06 } },
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.34.24 AM (2).jpeg", scramble: { x: -20, y: 80, rotate: 9, scale: 1.03 } },
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.34.25 AM (1).jpeg", scramble: { x: -100, y: -20, rotate: -6, scale: 1.07 } },
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.34.25 AM (2).jpeg", scramble: { x: 110, y: -40, rotate: 7, scale: 1.09 } },
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.34.25 AM.jpeg", scramble: { x: -50, y: 40, rotate: -3, scale: 1.04 } },
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.36.04 AM.jpeg", scramble: { x: 70, y: 60, rotate: 8, scale: 1.11 } },
+  { src: "/images/testimonials-screenshots/WhatsApp Image 2026-04-01 at 5.37.07 AM.jpeg", scramble: { x: -70, y: -50, rotate: -7, scale: 1.06 } },
 ];
 
 export default function Testimonials() {
-  const [isAligned, setIsAligned] = useState(true); // Default to true to prevent phantom elements during hydration
+  const [isAligned, setIsAligned] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkSize = () => {
-      const mobile = window.innerWidth < 768;
-      setIsMobile(mobile);
+      setIsMobile(window.innerWidth < 768);
     };
     checkSize();
     window.addEventListener('resize', checkSize);
@@ -86,10 +40,10 @@ export default function Testimonials() {
           <MoonPhases />
           <div className={styles.badge} style={{ marginTop: '2rem' }}>
             <div className={styles.line}></div>
-            <span className={styles.badgeText}>Client Stories</span>
+            <span className={styles.badgeText}>Real Feedback</span>
           </div>
           <h2 className={styles.title}>
-            What People <span className={styles.italic}>Say</span>
+            Client <span className={styles.italic}>Voices</span>
           </h2>
           <p className={styles.subtitle}>
             Click anywhere below to see what people feel
@@ -101,19 +55,22 @@ export default function Testimonials() {
           onClick={() => setIsAligned(!isAligned)}
         >
           <div className={isAligned ? styles.grid : styles.scrambleContainer}>
-            {testimonials.map((t, i) => {
+            {testimonialImages.map((t, i) => {
               const mobileScramble = {
                 x: t.scramble.x * 0.25,
                 y: t.scramble.y * 0.25,
                 rotate: t.scramble.rotate * 0.5,
                 scale: t.scramble.scale
               };
-              
+
               return (
                 <motion.div
                   key={i}
                   initial={isMobile ? mobileScramble : t.scramble}
-                  animate={isAligned ? { x: 0, y: 0, rotate: 0, scale: 1, opacity: 1 } : (isMobile ? mobileScramble : { ...t.scramble, opacity: 1 })}
+                  animate={isAligned 
+                    ? { x: 0, y: 0, rotate: 0, scale: 1, opacity: 1 } 
+                    : (isMobile ? { ...mobileScramble, opacity: 1 } : { ...t.scramble, opacity: 1 })
+                  }
                   transition={{
                     type: "spring",
                     stiffness: 220,
@@ -121,32 +78,16 @@ export default function Testimonials() {
                     mass: 1,
                     delay: isAligned ? i * 0.02 : 0
                   }}
-                  className={styles.card}
+                  className={styles.imageCard}
                 >
-                <div className={styles.stars}>
-                  {[...Array(t.stars)].map((_, index) => (
-                    <svg key={index} width="14" height="14" viewBox="0 0 24 24" fill="var(--accent-orange)" stroke="none">
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                    </svg>
-                  ))}
-                </div>
-                 <p className={styles.content}>&quot;{t.content}&quot;</p>
-                <div className={styles.author}>
-                  <div className={styles.authorCircle}>
-                    <Image 
-                      src={t.avatar} 
-                      alt={t.name}
-                      width={45}
-                      height={45}
-                      className={styles.avatarImg}
-                    />
-                  </div>
-                  <div className={styles.authorInfo}>
-                    <h4 className={styles.name}>{t.name}</h4>
-                    <span className={styles.verified}>Real Feedback</span>
-                  </div>
-                </div>
-              </motion.div>
+                  <Image 
+                    src={t.src} 
+                    alt={`Client Review ${i + 1}`}
+                    width={400}
+                    height={400}
+                    className={styles.testimonialImg}
+                  />
+                </motion.div>
               );
             })}
           </div>
