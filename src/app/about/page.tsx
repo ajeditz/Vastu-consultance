@@ -34,12 +34,7 @@ export default function AboutPage() {
         <RashiWheel />
       </div>
 
-      <Link href="/" className={styles.backBtn}>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <line x1="19" y1="12" x2="5" y2="12" />
-          <polyline points="12 19 5 12 12 5" />
-        </svg>
-      </Link>
+
 
       <main>
         {/* Intro Hero Section */}
@@ -52,7 +47,7 @@ export default function AboutPage() {
               variants={fadeInUp}
               transition={pageTransition}
             >
-              My <span className={styles.italic}>Roots</span>
+              My <span className={styles.italic}>Story</span>
             </motion.h1>
             <motion.div
               className={styles.heroLeadWrapper}
@@ -62,8 +57,8 @@ export default function AboutPage() {
               transition={{ ...pageTransition, delay: 0.2 }}
             >
               <p className={styles.heroLead}>
-                Namaste. I am an Astro-Vastu consultant dedicated to decoding the cosmic blueprint of your life. 
-                My path has been paved through deep spiritual immersion and learning from the ancient wisdom of India.
+                Namaste! I&apos;m Shalu Singh. I help people live happier lives by fixing the energy in their homes and reading the stars. 
+                My journey started with a simple wish — to bring peace and good fortune to everyone around me.
               </p>
             </motion.div>
           </div>
@@ -101,22 +96,22 @@ export default function AboutPage() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 1 }}
               >
-                <h2 className={styles.sectionTitleLeft}>The Foundation of Knowledge</h2>
+                <h2 className={styles.sectionTitleLeft}>How It All Began</h2>
                 <div className={styles.timeline}>
                   <div className={styles.timelineItem}>
                     <div className={styles.timelineDot}></div>
-                    <h3>Early Gurukul Education</h3>
-                    <p>My journey began in the sacred temples of Varanasi, where I spent my formative years studying ancient Vedas, Upanishads, and Jyotish Shastras under the strict guidance of esteemed Gurus.</p>
+                    <h3>Learning from the Best</h3>
+                    <p>It all started when I earned my Diploma in Astrology from the Institute for Research in Indian Wisdom (IRIW), studying under the famous Dr. Pawan Sinha &apos;Guruji&apos;. I completed both Pranav (1st Level) and Prabhakar (2nd Level) with flying colors — scoring 88% in my very first year!</p>
                   </div>
                   <div className={styles.timelineItem}>
                     <div className={styles.timelineDot}></div>
-                    <h3>Institute of Vedic Astrology</h3>
-                    <p>I pursued formal education to blend traditional wisdom with scientific methodology. I mastered the art of calculating planetary alignments and their profound impacts on human destiny.</p>
+                    <h3>Mastering Numerology &amp; More</h3>
+                    <p>I then trained under Dr. Rohit Gadkari, one of India&apos;s top numerologists. I completed courses in Advanced Numerology, Name Correction, and Placement — all the tools needed to truly change someone&apos;s life for the better.</p>
                   </div>
                   <div className={styles.timelineItem}>
                     <div className={styles.timelineDot}></div>
-                    <h3>Vastu Vidya Specialization</h3>
-                    <p>To understand the spiritual science of spaces, I trained at the Institute of Classical Architecture & Vastu, learning how to harmonize the five elements (Panchamahabhuta) for prosperity and peace.</p>
+                    <h3>Helping Hundreds of Families</h3>
+                    <p>Over the years, I&apos;ve helped hundreds of clients from all walks of life — doctors, business owners, teachers, and families. My work got noticed by newspapers, and I even wrote a book to share my knowledge with the world. Today, I use everything I&apos;ve learned to bring peace, success, and positivity into people&apos;s homes.</p>
                   </div>
                 </div>
               </motion.div>
@@ -128,8 +123,8 @@ export default function AboutPage() {
         <section className={`${styles.section} ${styles.darkSection}`}>
           <div className="container">
             <div className={styles.certHeader}>
-              <h2 className={styles.sectionTitle}>Certifications & Masteries</h2>
-              <p className={styles.subtitle}>Recognized accreditations from prestigious institutions that validate my expertise.</p>
+              <h2 className={styles.sectionTitle}>Certifications &amp; Training</h2>
+              <p className={styles.subtitle}>Real certificates from real teachers — proof of years of hard work and learning.</p>
             </div>
             
             <div className={styles.certGrid}>
@@ -139,42 +134,42 @@ export default function AboutPage() {
                   title: "Advanced Wrist Watch Course",
                   source: "Dr. Rohit Gadkari (Ace Numerologist)",
                   image: "/images/cert-0.jpg",
-                  description: "Specialized training in understanding the cosmic footprint of timepieces."
+                  description: "Learned how wrist watches connect to your energy and luck."
                 },
                 {
                   year: "2024",
                   title: "Advance Numerology",
                   source: "2D Consultants / Dr. Rohit Gadkari",
                   image: "/images/cert-3.jpg",
-                  description: "Comprehensive 6-month accreditation in the science of numbers."
+                  description: "A 6-month deep dive into the power of numbers and how they shape your life."
                 },
                 {
                   year: "2024-25",
                   title: "Diploma in Astrology (Prabhakar - 2nd Level)",
                   source: "Institute for Research in Indian Wisdom",
                   image: "/images/cert-5.jpg",
-                  description: "Advanced level Jyotish studies under Prof. Pawan Sinha 'Guruji'."
+                  description: "Advanced astrology training under the famous Prof. Pawan Sinha Guruji."
                 },
                 {
                   year: "2023-24",
                   title: "Diploma in Astrology (Pranav - 1st Level)",
                   source: "Institute for Research in Indian Wisdom",
                   image: "/images/cert-4.jpg",
-                  description: "Foundational astrological training with distinction marks."
+                  description: "First level astrology diploma — scored 88% marks!"
                 },
                 {
                   year: "2024",
                   title: "Advance Placement Course",
                   source: "Dr. Rohit Gadkari",
                   image: "/images/cert-2.jpg",
-                  description: "Expertise in spatial and energetic placement strategies."
+                  description: "Learned how to place objects and furniture for the best energy flow."
                 },
                 {
                   year: "2024",
                   title: "Advance Name Correction",
                   source: "Dr. Rohit Gadkari",
                   image: "/images/cert-1.jpg",
-                  description: "Specialized training in Vedic Name Correction techniques."
+                  description: "Training in fixing names to attract better luck and energy."
                 }
               ].map((cert, i) => (
                 <motion.div 
@@ -214,16 +209,16 @@ export default function AboutPage() {
                   <div className={styles.line}></div>
                   <span className={styles.badgeText}>Recognition</span>
                 </div>
-                <h2 className={styles.sectionTitleLeft}>Media Features & Prestigious Awards</h2>
+                <h2 className={styles.sectionTitleLeft}>In the News &amp; Awards</h2>
                 <p className={styles.mediaDescription}>
-                  Our commitment to authentic Vedic wisdom has been recognized by national media and esteemed institutions. From being featured in leading Hindi publications to receiving accolades for excellence in Numerology and Vastu, these milestones validate our journey of transforming lives.
+                  My work has been featured in newspapers and I have received awards for my skills in Numerology and Vastu. These are some of the proudest moments from my journey of helping people.
                 </p>
                 
                 <div className={styles.awardHighlight}>
                   <div className={styles.awardIcon}>🏆</div>
                   <div>
                     <h4>Best Numerologist Award 2024</h4>
-                    <p>Presented by Dr. Rohit Gadkari for exceptional performance and dedication in Advanced Numerology studies.</p>
+                    <p>Given by Dr. Rohit Gadkari for outstanding work and dedication in Numerology.</p>
                   </div>
                 </div>
               </motion.div>
@@ -265,53 +260,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Beautiful Gallery Section */}
-        <section className={styles.section}>
-          <div className="container">
-            <div className={styles.galleryHeader}>
-              <h2 className={styles.sectionTitle}>Moments & Memories</h2>
-              <p className={styles.subtitle}>A glimpse into seminars, consultations, and the sacred spaces we&apos;ve transformed.</p>
-            </div>
 
-            <div className={styles.galleryGrid}>
-              {[
-                { src: "/images/gallery-1.png", title: "Vedic Seminars", size: "large" },
-                { src: "/images/gallery-2.png", title: "Temple Blessings", size: "small" },
-                { src: "/images/gallery-3.png", title: "Client Consultations", size: "small" },
-                { src: "/images/gallery-4.png", title: "Vastu Corrections", size: "wide" },
-                { src: "/images/service-astrology.png", title: "Birth Chart Reading", size: "small" },
-                { src: "/images/service-vastu.png", title: "Space Harmonization", size: "small" },
-              ].map((img, i) => (
-                <motion.div 
-                  key={i}
-                  className={`${styles.galleryItem} ${styles[img.size]}`}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05, duration: 0.6 }}
-                >
-                  {/* Using standard img or a background for fallback if image doesn't exist to prevent crash */}
-                  <div className={styles.galleryImgWrapper}>
-                    <Image 
-                      src={img.src} 
-                      alt={img.title} 
-                      fill 
-                      style={{ objectFit: 'cover' }} 
-                      onError={(e) => {
-                        // Fallback logic if image doesn't exist
-                        e.currentTarget.src = "/images/gallery-1.png"; 
-                      }}
-                    />
-                  </div>
-                  <div className={styles.galleryOverlay}>
-                    <h3>{img.title}</h3>
-                    <span className={styles.galleryIcon}>+</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Call to Action */}
         <section className={styles.ctaSection}>
@@ -322,8 +271,8 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2>Ready to change your stars?</h2>
-              <p>Book a consultation today and unlock the fortune meant for you.</p>
+              <h2>Ready to Transform Your Life?</h2>
+              <p>Let&apos;s work together to bring more peace, happiness, and success into your home.</p>
               <Link href="/#contact" className={styles.bookBtn}>
                 Book a Consultation
               </Link>
