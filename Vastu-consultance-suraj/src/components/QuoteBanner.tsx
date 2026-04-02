@@ -67,7 +67,7 @@ export default function QuoteBanner() {
               </div>
               <div className={styles.expertBrief}>
                 <h4 className={styles.expertNameInline}>Shalu Singh</h4>
-                <p className={styles.expertTitleInline}>Vastu Consultant & Energy Expert</p>
+                <p className={styles.expertTitleInline}>Vastu Energy Science Expert</p>
               </div>
             </div>
           </div>

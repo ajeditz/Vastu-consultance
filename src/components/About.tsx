@@ -14,7 +14,7 @@ export default function About() {
               <div className={styles.imageWrapper}>
                 <Image 
                   src="/images/profile_pic.jpeg" 
-                  alt="Shalu Singh - Professional Vastu Consultant & Energy Expert" 
+                  alt="Shalu Singh - Professional Vastu Energy Science Expert" 
                   fill
                   style={{ objectFit: 'cover', objectPosition: 'center top' }}
                   className={styles.image}
@@ -28,7 +28,7 @@ export default function About() {
             </div>
             <div className={styles.expertInfo}>
               <h3 className={styles.expertName}>Shalu Singh</h3>
-              <p className={styles.expertTitle}>Vastu Consultant & Energy Expert</p>
+              <p className={styles.expertTitle}>Vastu Energy Science Expert</p>
             </div>
           </div>
 
