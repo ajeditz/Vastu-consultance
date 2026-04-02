@@ -10,7 +10,7 @@
   justify-content: center;
   pointer-events: none;
   z-index: -1;
-  color: var(--accent-orange);
+  color: #8C7B6B;
 }
 
 .sriYantra {
@@ -50,7 +50,7 @@
   bottom: -5px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--accent-orange);
+  color: #8C7B6B;
   white-space: nowrap;
 }
 
@@ -69,7 +69,7 @@
   top: 15%;
   right: 10%;
   z-index: -1;
-  color: var(--accent-orange);
+  color: #8C7B6B;
 }
 
 .sunCore {
@@ -121,7 +121,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--accent-orange);
+  color: #8C7B6B;
   z-index: 2;
 }
 

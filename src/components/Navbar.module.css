@@ -71,7 +71,7 @@
 }
 
 .link:hover {
-  color: var(--accent-orange);
+  color: #8C7B6B;
 }
 
 .cta {
@@ -89,7 +89,7 @@
 }
 
 .cta:hover {
-  color: var(--accent-orange);
+  color: #8C7B6B;
   border-color: var(--accent-orange);
 }
 
