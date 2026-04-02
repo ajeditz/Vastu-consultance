@@ -74,6 +74,18 @@ const services = [
       </svg>
     ),
   },
+  {
+    title: "Mobile Numerology",
+    description: "Find out if your mobile number brings you good luck and positive energy.",
+    image: "/images/service-numerology.png",
+    icon: (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+        <path d="M9 7h6M9 11h6"></path>
+      </svg>
+    ),
+  },
 ];
 
 export default function Services() {

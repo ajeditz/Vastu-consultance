@@ -16,7 +16,7 @@
 .line {
   width: 2rem;
   height: 1px;
-  background-color: var(--accent-orange);
+  background-color: #1A9E7A;
 }
 
 .badge {
@@ -31,7 +31,7 @@
   text-transform: uppercase;
   letter-spacing: 0.4em;
   font-weight: 700;
-  color: var(--accent-orange);
+  color: #1A9E7A;
 }
 
 .title {
