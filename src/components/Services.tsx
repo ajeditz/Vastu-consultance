@@ -52,7 +52,7 @@ const services = [
     ),
   },
   {
-    title: "Vaastu Correction",
+    title: "Vastu Correction",
     description: "Fix your home's energy without breaking any walls.",
     image: "/images/service-correction.png",
     icon: (
@@ -201,34 +201,34 @@ export default function Services() {
                     key={index}
                     className={styles.card}
                     initial={{ opacity: 0, scale: 0.5, x: position > 0 ? "100%" : "-100%" }}
-                    animate={{ 
-                      opacity, 
-                      scale, 
-                      x, 
+                    animate={{
+                      opacity,
+                      scale,
+                      x,
                       zIndex,
                       rotateY,
                       filter: `blur(${blur})`
                     }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    style={{ 
-                      position: "absolute", 
-                      left: "50%", 
+                    style={{
+                      position: "absolute",
+                      left: "50%",
                       marginLeft: "-210px", // Half of new width (420/2)
                       pointerEvents: isActive ? "auto" : "none"
                     }}
                     onClick={() => handleCardClick(index)}
                   >
                     <div className={styles.imageOverlay}>
-                      <Image 
-                        src={service.image} 
-                        alt={service.title} 
-                        fill 
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
                         style={{ objectFit: 'cover' }}
                         className={styles.cardImage}
                       />
                       <div className={styles.gradient}></div>
                     </div>
-                    <motion.div 
+                    <motion.div
                       className={styles.cardContent}
                       animate={{ opacity: isActive ? 1 : 0 }}
                       transition={{ duration: 0.4 }}
@@ -251,8 +251,8 @@ export default function Services() {
             </button>
             <div className={styles.dots}>
               {services.map((_, i) => (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   className={`${styles.dot} ${i === activeIndex ? styles.activeDot : ""}`}
                   onClick={() => handleCardClick(i)}
                 ></div>
