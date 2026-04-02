@@ -33,9 +33,9 @@ export default function Hero() {
           </div>
 
           <div className={styles.headlineContainer}>
-            <img 
-              src="/logo2.png" 
-              alt="Healing Consultancy - Vastu & Astrology" 
+            <img
+              src="/logo1.png"
+              alt="Healing Consultancy - Vastu & Astrology"
               className={styles.headlineLogo}
             />
           </div>
