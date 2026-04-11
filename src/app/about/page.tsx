@@ -101,7 +101,7 @@ export default function AboutPage() {
                   <div className={styles.timelineItem}>
                     <div className={styles.timelineDot}></div>
                     <h3>Learning from the Best</h3>
-                    <p>It all started when I earned my Diploma in Astrology from the Institute for Research in Indian Wisdom (IRIW), studying under the famous Dr. Pawan Sinha &apos;Guruji&apos;. I completed both Pranav (1st Level) and Prabhakar (2nd Level) with flying colors — scoring 88% in my very first year!</p>
+                    <p>It all started when I earned my Degree in Astrology from the Institute for Research in Indian Wisdom (IRIW), studying under the famous Dr. Pawan Sinha &apos;Guruji&apos;. I completed both Pranav (1st Level) and Prabhakar (2nd Level) with flying colors — scoring 88% in my very first year!</p>
                   </div>
                   <div className={styles.timelineItem}>
                     <div className={styles.timelineDot}></div>
@@ -130,6 +130,20 @@ export default function AboutPage() {
             <div className={styles.certGrid}>
               {[
                 {
+                  year: "2026",
+                  title: "Advanced Professional Course in Vastu Energy Science",
+                  source: "Dr. Rohit Gadkari (PHD Gold Medalist)",
+                  image: "/images/vastu_energy_course_cft.png",
+                  description: "Mastery in the science of energy flow and advanced Vastu corrections to harmonize living and working spaces."
+                },
+                {
+                  year: "2026",
+                  title: "Advanced Professional Course in Business Numerology",
+                  source: "Dr. Rohit Gadkari (PHD Gold Medalist)",
+                  image: "/images/business_num_cft.png",
+                  description: "Specialized expertise in business name alignment and numerical strategies to foster growth and prosperity."
+                },
+                {
                   year: "2024",
                   title: "Advanced Wrist Watch Course",
                   source: "Dr. Rohit Gadkari (Ace Numerologist)",
@@ -145,17 +159,17 @@ export default function AboutPage() {
                 },
                 {
                   year: "2024-25",
-                  title: "Diploma in Astrology (Prabhakar - 2nd Level)",
+                  title: "Degree in Astrology (Prabhakar - 2nd Level)",
                   source: "Institute for Research in Indian Wisdom",
                   image: "/images/cert-5.jpg",
                   description: "Advanced astrology training under the famous Prof. Pawan Sinha Guruji."
                 },
                 {
                   year: "2023-24",
-                  title: "Diploma in Astrology (Pranav - 1st Level)",
+                  title: "Degree in Astrology (Pranav - 1st Level)",
                   source: "Institute for Research in Indian Wisdom",
                   image: "/images/cert-4.jpg",
-                  description: "First level astrology diploma — scored 88% marks!"
+                  description: "First level astrology degree — scored 88% marks!"
                 },
                 {
                   year: "2024",
